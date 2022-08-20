@@ -33,6 +33,7 @@ main {
   border-radius: 5px;
   box-shadow: -2px 0 20px 5px hsla(218deg, 22%, 67%, 0.4);
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 .container .intro {
   padding: 35px;
@@ -61,21 +62,69 @@ main {
 }
 .container .content .left .first {
   color: var(--l-gray);
+  display: flex;
+  margin-bottom: 1rem;
 }
 .container .content .left .first .price {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
+}
+.container .content .left .first .second {
+  align-self: center;
+  margin-left: clamp(0px, 1rem, 20px);
 }
 .container .content .left h2 {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
-.container .content .left, .container .content .right {
+.container .content .left button {
+  background: var(--b-yellow);
+  box-shadow: 0px 15px 23px -16px rgb(64, 59, 64);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  transition: all 0.5s ease-in-out;
+}
+.container .content .left button:hover {
+  background: rgb(192, 231, 18);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.container .content .left,
+.container .content .right {
   width: 50%;
   padding: 30px;
 }
 .container .content .right {
   background: hsla(179deg, 62%, 43%, 0.7);
   color: var(--l-gray);
+}
+.container .content .right h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+.container .content .right p {
+  line-height: 1.6rem;
+}
+
+/*Mobile View*/
+@media screen and (max-width: 750px) {
+  .container {
+    margin-top: 2rem;
+  }
+  .container .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .content .left,
+.container .content .right {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
